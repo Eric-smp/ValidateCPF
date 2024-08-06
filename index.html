@@ -160,7 +160,11 @@
                 regressivo--;
                 return ac;
             }, 0);
-            const digito = 11 - (total % 11);
+               let digito = 11 - (total % 11)
+            if (digito === 10) {
+                 digito = 0;
+                }
+
 
             if (this.primerioDigito === String(digito)) {
                 return true;
@@ -178,7 +182,10 @@
                 regressivo--;
                 return ac;
             }, 0);
-            const digito = 11 - (total % 11)
+               let digito = 11 - (total % 11)
+             if (digito === 10) {
+                    digito = 0;
+                }
 
             if (this.segundoDigito === String(digito)) {
                 return true;
